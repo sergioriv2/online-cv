@@ -1,0 +1,35 @@
+{
+        "aside": [
+            {
+                "name": "Home",
+                "iconClass": "fas fa-home",
+                "internalId": "aside-option1",
+                "active": true
+            },
+            {
+                "name": "Acerca de mi",
+                "iconClass": "fas fa-address-card",
+                "internalId": "aside-option2",
+                "active": false
+            },
+            {
+                "name": "Proyectos",
+                "iconClass": "fas fa-folder-open",
+                "internalId": "aside-option3",
+                "active": false
+            },
+            {
+                "name": "Formación Academica",
+                "iconClass": "fas fa-user-graduate",
+                "internalId": "aside-option4",
+                "active": false
+            },
+            {
+                "name": "Hobbies",
+                "iconClass": "fas fa-desktop",
+                "internalId": "aside-option5",
+                "active": false
+            }
+        ]
+    
+}

@@ -1,0 +1,23 @@
+.potrait-component {
+  width: 200px;
+  display: flex;
+  justify-content: center;
+}
+
+.potrait-component__img {
+  width: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+.potrait-component__img.small {
+  width: 50%;
+}
+
+.potrait-component__img.medium {
+  width: 80%;
+}
+
+.potrait-component__img.large {
+  width: 100%;
+}

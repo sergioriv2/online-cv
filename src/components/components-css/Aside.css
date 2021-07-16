@@ -1,0 +1,7 @@
+.aside-component {
+  background-color: var(--white);
+  width: 20%;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}

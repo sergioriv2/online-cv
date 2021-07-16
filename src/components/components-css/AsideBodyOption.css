@@ -1,0 +1,46 @@
+.asideBody__option {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--grey);
+  font-size: 17px;
+}
+
+.asideBody__option:hover {
+  cursor: pointer;
+  background-color: var(--grey);
+  transition: background-color 0.5s;
+}
+
+.asideBody__option i {
+  flex-basis: 15%;
+  text-align: center;
+}
+
+.asideBody__option p {
+  font-weight: 600;
+  flex-basis: 75%;
+}
+
+.selected {
+  width: 2%;
+  height: 100%;
+  background-color: var(--grey);
+  background-color: rgb(219, 113, 52);
+  animation: slideright 150ms forwards;
+  position: relative;
+  left: -10px;
+  opacity: 0;
+}
+
+@keyframes slideright {
+  from {
+    opacity: 0.5;
+    left: -5px;
+  }
+  to {
+    opacity: 1;
+    left: 0;
+  }
+}
