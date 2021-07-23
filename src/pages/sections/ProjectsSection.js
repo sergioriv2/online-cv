@@ -1,49 +1,37 @@
 import React from "react";
-import { useEffect, useState } from "react/cjs/react.development";
+import useFetch from "../../hooks/useFetch";
+
+import ProjectDetails from "../../components/components-js/ProjectDetails";
+import LoadingSpinner from "../../components/components-js/LoadingSpinner";
+
 import "../../components/components-css/PrincipalPage.css";
-import ProjectSummary from "../../components/components-js/ProjectSummary";
 
 const ProyectsSection = () => {
-  const [data, setData] = useState([]);
-
-  const fetchAPI = async () => {
-    let url = "/projects";
-
-    const dataRequest = {
-      method: "GET",
-      mode: "cors",
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-        "Content-Type": "application/json",
-      },
-    };
-    const response = await fetch(url, dataRequest);
-    const result = await response.json();
-    setData(result);
-  };
-
-  useEffect(() => {
-    fetchAPI();
-  }, []);
+  const { data, loading } = useFetch("/projects");
 
   return (
     <section className="section-component">
       <div className="section-component__content">
         <h1 id="projects">Proyectos destacados</h1>
         <hr></hr>
-        {data.map((summary) => {
-          return (
-            <ProjectSummary
-              key={summary._id}
-              id={summary._id}
-              ProjectTitle={summary.title}
-              DateRange={summary.date}
-              ProjectDesc={summary.description}
-              ProjectSoftwares={summary.softwares}
-              ProjectRepos={summary.repository}
-            ></ProjectSummary>
-          );
-        })}
+
+        {loading ? (
+          <LoadingSpinner />
+        ) : (
+          data.map((summary) => {
+            return (
+              <ProjectDetails
+                key={summary._id}
+                id={summary._id}
+                ProjectTitle={summary.title}
+                DateRange={summary.date}
+                ProjectDesc={summary.description}
+                ProjectSoftwares={summary.softwares}
+                ProjectRepos={summary.repository}
+              ></ProjectDetails>
+            );
+          })
+        )}
       </div>
     </section>
   );
