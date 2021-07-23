@@ -21,6 +21,7 @@
 .asideBody__option p {
   font-weight: 600;
   flex-basis: 75%;
+  padding-right: 10px;
 }
 
 .selected {

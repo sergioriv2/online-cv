@@ -1,7 +1,7 @@
 import React from "react";
 import AboutSection from "./AboutSection";
 import HomeSection from "./HomeSection";
-import ProyectsSection from "./ProyectsSection";
+import ProjectsSection from "./ProjectsSection";
 import EducationSection from "./EducationSection";
 import HobbiesSection from "./HobbiesSection";
 
@@ -12,7 +12,7 @@ const Content = () => {
     <div className="principalPage-content">
       <HomeSection></HomeSection>
       <AboutSection></AboutSection>
-      <ProyectsSection></ProyectsSection>
+      <ProjectsSection></ProjectsSection>
       <EducationSection></EducationSection>
       <HobbiesSection></HobbiesSection>
     </div>

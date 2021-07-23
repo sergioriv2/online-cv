@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "../components/components-js/Header";
-import Content from "./sections/principalPageContent";
+import Content from "./sections/PrincipalPageContent";
 
 import "../components/components-css/PrincipalPage.css";
 

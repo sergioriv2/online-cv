@@ -1,5 +1,5 @@
 .header-component {
-  background-color: var(--black);
+  background-color: black;
   width: 100%;
   height: 500px;
   position: relative;
@@ -9,7 +9,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.65;
+  opacity: 0.43;
 }
 
 .header-component__container {
@@ -30,12 +30,12 @@
 }
 
 .header-component__container__info {
-  color: var(--white);
   text-align: center;
 }
 
 .header-component__container__info h1 {
   font-size: calc(1vw + 4vh);
+  color: var(--white);
 }
 
 .header-component__container__info h4 {
@@ -48,18 +48,20 @@
   margin: 0 auto;
 }
 
-.header-component__container__buttons a {
+.header-component__container__buttons button {
   color: white;
   text-decoration: none;
   font-family: "Helvetica Now Text";
   border: 2px solid rgb(74, 77, 252);
+  background-color: transparent;
   transition: background-color 200ms linear;
   padding: 5px 30px;
+  border-radius: 50px;
   font-size: 17px;
   font-weight: 500;
 }
 
-.header-component__container__buttons a:hover {
+.header-component__container__buttons button:hover {
   background-color: rgb(74, 77, 252);
   transition: background-color 200ms linear;
   cursor: pointer;
