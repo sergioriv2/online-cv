@@ -1,10 +1,10 @@
 import React from "react";
-import AsideListOfOptions from "./AsideListOfOptions";
+import AsideList from "./AsideList";
 
 const AsideBody = () => {
   return (
     <div className="asideBody-component">
-      <AsideListOfOptions />
+      <AsideList />
     </div>
   );
 };

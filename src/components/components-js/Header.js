@@ -10,7 +10,11 @@ import cv from "../../resources/SergioRiv_CV.pdf";
 const Header = (props) => {
   return (
     <header className="header-component">
-      <div className="header-component__banner" alt="banner"></div>
+      <img
+        className="header-component__banner"
+        src="https://birchtree.nyc3.digitaloceanspaces.com/images/wwdc18/dev-dots.png"
+        alt="banner"
+      ></img>
       <div className="header-component__container">
         <Potrait src={foto} potraitSize="large" />
         <div className="header-component__container__info">
@@ -18,9 +22,9 @@ const Header = (props) => {
           <h4>Jr. Developer</h4>
         </div>
         <div className="header-component__container__buttons">
-          <a href={cv} download>
-            Descargar CV
-          </a>
+          <form method="get" action={cv}>
+            <button type="submit">Descargar CV</button>
+          </form>
         </div>
       </div>
     </header>

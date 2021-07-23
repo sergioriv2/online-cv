@@ -4,31 +4,31 @@
                 "name": "Home",
                 "iconClass": "fas fa-home",
                 "internalId": "aside-option1",
-                "active": true
+                "jumpTo": "home"
             },
             {
                 "name": "Acerca de mi",
                 "iconClass": "fas fa-address-card",
                 "internalId": "aside-option2",
-                "active": false
+                "jumpTo": "about"
             },
             {
                 "name": "Proyectos",
                 "iconClass": "fas fa-folder-open",
                 "internalId": "aside-option3",
-                "active": false
+                "jumpTo": "projects"
             },
             {
                 "name": "Formación Academica",
                 "iconClass": "fas fa-user-graduate",
                 "internalId": "aside-option4",
-                "active": false
+                "jumpTo": "education"
             },
             {
                 "name": "Hobbies",
                 "iconClass": "fas fa-desktop",
                 "internalId": "aside-option5",
-                "active": false
+                "jumpTo": "hobbies"
             }
         ]
     

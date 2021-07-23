@@ -5,7 +5,7 @@ const HomeSection = () => {
   return (
     <section className="section-component">
       <div className="section-component__content">
-        <h1>Bienvenida</h1>
+        <h1 id="home">Bienvenida</h1>
         <hr></hr>
         <p>¡Hola, te doy la bienvenida a mi curriculum online! 💻 </p>
         <p>

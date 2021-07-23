@@ -71,10 +71,6 @@ ul li {
   margin: 0;
 }
 
-img {
-  pointer-events: none;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -88,6 +84,16 @@ ul {
   --black: #252525;
   --white: #eee;
   --grey: #dbdbdb;
+  --darkgrey: #333333;
+  --lightblue: #159aa3;
+}
+
+p {
+  color: var(--darkgrey);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 html,
@@ -101,6 +107,13 @@ h3,
 h4 {
   font-family: "Kanit";
   letter-spacing: 1px;
+  color: var(--black);
+}
+
+summary {
+  font-family: "Kanit";
+  font-weight: 500;
+  cursor: pointer;
 }
 
 h1 {
@@ -108,7 +121,8 @@ h1 {
 }
 
 ul,
-p {
+p,
+a {
   font-family: "Helvetica Now Text";
   font-weight: normal;
 }

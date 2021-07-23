@@ -12,11 +12,11 @@ const AboutSection = () => {
   return (
     <section className="section-component">
       <div className="section-component__content">
-        <h1>Acerca de mi</h1>
+        <h1 id="about">Acerca de mi</h1>
         <hr></hr>
         <p>
           Ahora si, después de leer esa introducción dejame contarte en detalle
-          quién soy. 😄
+          quién soy.
         </p>
         <ul className="content__ask">
           <li>

@@ -5,7 +5,7 @@ const EduactionSection = () => {
   return (
     <section className="section-component">
       <div className="section-component__content">
-        <h1>Formación Académica</h1>
+        <h1 id="education">Formación Académica</h1>
         <hr></hr>
         <ul className="education-list">
           <li className="education-list__item">
