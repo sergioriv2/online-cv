@@ -1,5 +1,8 @@
 import React from "react";
 
+import "./css/PrincipalPage.css";
+import "./css/HobbiesSection.css";
+
 const HobbiesSection = () => {
   return (
     <section className="section-component">

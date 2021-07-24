@@ -1,5 +1,7 @@
 import React from "react";
-import "../../components/components-css/PrincipalPage.css";
+
+import "./css/PrincipalPage.css";
+import "./css/EducationSection.css";
 
 const EduactionSection = () => {
   return (

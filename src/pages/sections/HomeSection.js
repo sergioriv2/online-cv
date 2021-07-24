@@ -1,5 +1,5 @@
 import React from "react";
-import "../../components/components-css/PrincipalPage.css";
+import "./css/PrincipalPage.css";
 
 const HomeSection = () => {
   return (

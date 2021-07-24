@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react/cjs/react.development";
+import { useState } from "react";
 import "../components-css/ProjectDetails.css";
 import LoadingSpinner from "./LoadingSpinner";
 import DetailsImage from "./DetailsImage";
@@ -23,7 +23,8 @@ const ProjectSummary = (props) => {
   const [open, setOpen] = useState(false);
 
   const fetchImages = async () => {
-    const url = "projects/" + id + "/images";
+    const url =
+      "https://online-cvapp.herokuapp.com/api/projects/" + id + "/images";
 
     const dataRequest = {
       method: "GET",
@@ -44,7 +45,8 @@ const ProjectSummary = (props) => {
     setImagesLoading(false);
   };
   const fetchVideos = async () => {
-    const url = "projects/" + id + "/videos";
+    const url =
+      "https://online-cvapp.herokuapp.com/api/projects/" + id + "/videos";
 
     const dataRequest = {
       method: "GET",
@@ -68,7 +70,6 @@ const ProjectSummary = (props) => {
     setOpen(e.currentTarget.open);
     if (imagesData === null) fetchImages();
     if (videosData === null) fetchVideos();
-    console.log(imagesData);
   };
 
   const classComponent = open
@@ -119,21 +120,3 @@ const ProjectSummary = (props) => {
 };
 
 export default ProjectSummary;
-
-/**
-          <details>
-            <summary>Imagenes</summary>
-            {imagesLoading ? (
-              <LoadingSpinner></LoadingSpinner>
-            ) : (
-              imagesData.media.images.map((data) => {
-                return (
-                  <DetailsImage
-                    url={data.url}
-                    alt={data._id}
-                    key={data._id}
-                  ></DetailsImage>
-                );
-              })
-            )}
-          </details> */

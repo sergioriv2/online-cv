@@ -1,5 +1,6 @@
 import React from "react";
-import "../../components/components-css/PrincipalPage.css";
+import "./css/PrincipalPage.css";
+import "./css/AboutSection.css";
 
 const _calculateAge = (birthday) => {
   // birthday is a date
@@ -24,7 +25,7 @@ const AboutSection = () => {
               <i>¿Quién eres y cómo te describirias? </i> 🔍
             </p>
             <p className="content__ask__answer">
-              Mi nombre es Sergio Armando Rivera Cucho y tengo{" "}
+              Mi nombre es Sergio Rivera y tengo{" "}
               {_calculateAge(new Date(2002, 1, 14))} años, actualmente estoy
               cursando una tecnicatura de programación en la Universidad
               Tecnológica Nacional en Argentina. Creo que lo que mas me

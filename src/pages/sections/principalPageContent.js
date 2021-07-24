@@ -5,7 +5,7 @@ import ProjectsSection from "./ProjectsSection";
 import EducationSection from "./EducationSection";
 import HobbiesSection from "./HobbiesSection";
 
-import "../../components/components-css/PrincipalPage.css";
+import "./css/PrincipalPage.css";
 
 const Content = () => {
   return (
