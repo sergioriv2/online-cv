@@ -1,70 +1,11 @@
-@font-face {
-  font-family: "Helvetica Now Text";
-  src: url("./resources/fonts/helvetica/HelveticaNowText-Regular.woff2")
-    format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Helvetica Now Text";
-  src: url("./resources/fonts/helvetica/HelveticaNowText-Bold.woff2")
-    format("woff2");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Helvetica Now Text";
-  src: url("./resources/fonts/helvetica/HelveticaNowText-Light.woff2")
-    format("woff2");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Helvetica Now Text";
-  src: url("./resources/fonts/helvetica/HelveticaNowText-Medium.woff2")
-    format("woff2");
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Kanit";
-  src: url("./resources/fonts/kanit/Kanit-Bold.woff2") format("woff2"),
-    url("./resources/fonts/kanit/Kanit-Bold.woff") format("woff");
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Kanit";
-  src: url("./resources/fonts/kanit/Kanit-Regular.woff2") format("woff2"),
-    url("./resources/fonts/kanit/Kanit-Regular.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Kanit";
-  src: url("./resources/fonts/kanit/Kanit-Light.woff2") format("woff2"),
-    url("./resources/fonts/kanit/Kanit-Light.woff") format("woff");
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;500&family=Open+Sans:wght@300;400;500;700&family=Raleway:wght@200;400&display=swap');
 
 body,
 h1,
 h2,
 h3,
 h4,
+h6,
 p,
 ul,
 ul li {
@@ -82,14 +23,20 @@ ul {
 
 :root {
   --black: #252525;
-  --white: #eee;
-  --grey: #dbdbdb;
+  --text: #eee;
+  --subtext: #adadad;
   --darkgrey: #333333;
-  --lightblue: #159aa3;
+  --secondary: #159aa3;
+  --primary: #e7484c;
+  --background-1:  #070d12;
+  --background-2: #061018;
 }
 
 p {
-  color: var(--darkgrey);
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 700;
+  color: var(--subtext);
+  line-height: 1.7em;
 }
 
 html {
@@ -104,14 +51,14 @@ body {
 h1,
 h2,
 h3,
-h4 {
-  font-family: "Kanit";
+h4, h5, h6 {
+  font-family: 'Kanit', sans-serif;
   letter-spacing: 1px;
-  color: var(--black);
+  color: var(--text);
 }
 
 summary {
-  font-family: "Kanit";
+
   font-weight: 500;
   cursor: pointer;
 }
@@ -123,6 +70,6 @@ h1 {
 ul,
 p,
 a {
-  font-family: "Helvetica Now Text";
+
   font-weight: normal;
 }

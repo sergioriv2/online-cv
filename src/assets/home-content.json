@@ -1,0 +1,210 @@
+  {
+    "lang": {
+      "es": {
+        "page": {
+          "home": {
+            "asideMenu": [
+              {
+                "desc": "Inicio",
+                "goTo": "home",
+                "icon": "home"
+              },
+              {
+                "desc": "Acerca de mi",
+                "goTo": "about",
+                "icon": "user"
+              },
+              {
+                "desc": "Porfolio",
+                "goTo": "porfolio",
+                "icon": "folder-tree"
+              },
+              {
+                "desc": "Educación",
+                "goTo": "education",
+                "icon": "graduation-cap"
+              }
+            ],
+            "sections": {
+              "welcome": {
+                "header": "bienvenido",
+                "download": {
+                  "desc": "Descargar CV"
+                },
+                "paragraphs": [
+                  "<p>Te doy la bienvenida a mi página, acá encontrarás información adicional para conocerme mejor, además también encontrarás mi porfolio. </p>",
+                  "<p>Soy Sergio Rivera, nací en Texas, Estados Unidos. Vivo en Buenos Aires, Argentina. En cuanto a mis estudios académicos, cuento con secundario completo, además de que a inicios de 2022 me recibí como Tecnico Superior en Programación en la UTN de General Pacheco, Buenos Aires, Argentina</p>"
+                ]
+              },
+              "aboutMe": {
+                "header": "Acerca de mi",
+                "paragraphs": [
+                  "La idea principal de esta sección es contestar unas preguntas frecuentes que hacen los recruiters/empleadores a nosotros los devs."
+                ],
+                "qa": [
+                  {
+                    "question": "¿Quién eres?",
+                    "answer": "Soy un MERN/Full Stack developer, eso quiere decir que en las aplicaciones que desarrollo me encargo tanto del front end así como también de la lógica del back end."
+                  },
+                  {
+                    "question": "¿Cómo te describirías?",
+                    "answer": "Me describiría como una persona curiosa, responsable y leal. Desde que era chico siempre me interesó todo lo relacionado con la tecnología, por eso disfruto de lo que hago."
+                  },
+                  {
+                    "question": "¿Por qué debería contratarte?",
+                    "answer": "Desde mi punto de vista, me considero como alguien con gran potencial, además siempre que trabajo doy lo mejor de mi, con las mejores energías y con el mayor respeto hacia todos."
+                  },
+                  {
+                    "question": "¿Cuál es tu experiencia laboral?",
+                    "answer": "Por el momento, ninguna. Hoy en día, para mí, es dificil encontrar oportunidades laborales. La mayoría de los cargos requieren personas con experiencia previa."
+                  },
+                  {
+                    "question": "¿Qué tecnologías sabes usar?",
+                    "answer": "Entra las que más conozco podría destacar: React (Redux, Router, Hooks), MongoDB, Express, NodeJS, SQL Server, MySQL y ASP"
+                  }
+                ]
+              },
+              "education": {
+                "header": "Historial Academico",
+                "data": [
+                  {
+                    "date": {
+                      "start": "2022",
+                      "end": "2022"
+                    },
+                    "title": "Curso completo de React Hooks, Redux, Router",
+                    "where": "Udemy",
+                    "status": "completed",
+                    "average": ""
+                  },
+                  {
+                    "date": {
+                      "start": "2020",
+                      "end": "2022"
+                    },
+                    "title": "Tecnicatura Superior en Programación",
+                    "where": "UTN FRGP, Argentina",
+                    "status": "completed",
+                    "average": ""
+                  },
+                  {
+                    "date": {
+                      "start": "2013",
+                      "end": "2029"
+                    },
+                    "title": "Bachiller en Administración Contable",
+                    "where": "Instituto Federico Dickens, Argentina",
+                    "status": "completed",
+                    "average": ""
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "en": {
+        "page": {
+          "home": {
+            "asideMenu": [
+              {
+                "desc": "Home",
+                "goTo": "home",
+                "icon": "home"
+              },
+              {
+                "desc": "About Me",
+                "goTo": "about",
+                "icon": "user"
+              },
+              {
+                "desc": "Porfolio",
+                "goTo": "porfolio",
+                "icon": "folder-tree"
+              },
+              {
+                "desc": "Education",
+                "goTo": "education",
+                "icon": "graduation-cap"
+              }
+            ],
+            "sections": {
+              "welcome": {
+                "header": "Welcome",
+                "paragraphs": [
+                  "<p>Welcome to my personal website!, here you may find aditional information about myself. This way people who visits this page might know more about me and also see my porfolio.</p>",
+                  "<p>My name is Sergio Rivera, I was born in Texas, U.S. Right now I am living in Buenos Aires. I have completed high school and in beggings from 2020 I graduated from college with a Technician Programming Seniority degree at Universidad Tecnologica Nacional, General Pacheco, Buenos Aires, Argentina</p>"
+                ],
+                "download": {
+                  "desc": "Download CV"
+                }
+              },
+              "aboutMe": {
+                "header": "About me",
+                "paragraphs": [
+                  "The principal idea from this section is answer a few frequent questions recruiters ask to devs."
+                ],
+                "qa": [
+                  {
+                    "question": "Who are you?",
+                    "answer": "I'm a MERN/Full Stack developer, that means I'm responsible on developing the front end and the back end logic in my applications."
+                  },
+                  {
+                    "question": "How would you discribe yourself?",
+                    "answer": "Since I was a child I've always been interested and feel curiosity in technology and computers, due to that I've found myself in sometroubles. Now as an adult I consider myself as a curious, responsible and loyal person."
+                  },
+                  {
+                    "question": "Why should we hire you?",
+                    "answer": "As the way I see it, I find myself as someone with big potential. Besides, I always work to the fullest with the best energy and respect to everyone."
+                  },
+                  {
+                    "question": "Do you have any previous experience?",
+                    "answer": "At this time I don't. Nowadays, speaking about my own, it is difficult find jobs oportunities due that most employers require people with experience."
+                  },
+                  {
+                    "question": "What technologies do you know?",
+                    "answer": "I have knowledge using React (Redux, Router, Hooks), MongoDB, Express, NodeJS, SQL Server, MySQL and also PHP and ASP"
+                  }
+                ]
+              },
+              "education": {
+                "header": "Academic Background",
+                "data": [
+                  {
+                    "date": {
+                      "start": "2022",
+                      "end": "2022"
+                    },
+                    "title": "React Hooks, Redux, Router Course",
+                    "where": "Udemy",
+                    "status": "completed",
+                    "average": ""
+                  },
+                  {
+                    "date": {
+                      "start": "2020",
+                      "end": "2022"
+                    },
+                    "title": "Programming Senior Technician",
+                    "where": "UTN FRGP, Argentina",
+                    "status": "completed",
+                    "average": ""
+                  },
+                  {
+                    "date": {
+                      "start": "2013",
+                      "end": "2029"
+                    },
+                    "title": "Bachelor's Degree in Counting Administration",
+                    "where": "Instituto Federico Dickens, Argentina",
+                    "status": "completed",
+                    "average": ""
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }

@@ -10,7 +10,6 @@ export default function useFetch(url) {
       try {
         const dataRequest = {
           method: "GET",
-          mode: "cors",
           headers: {
             "Access-Control-Allow-Origin": "*",
             "Content-Type": "application/json",
@@ -18,8 +17,9 @@ export default function useFetch(url) {
         };
 
         const response = await fetch(url, dataRequest);
-        const result = await response.json();
-        setData(result);
+        const data = await response.json();
+        if (data.ok) setData(data.results);
+        else setError(data);
         setLoading(false);
       } catch (err) {
         setLoading(false);
