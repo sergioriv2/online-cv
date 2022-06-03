@@ -24,6 +24,7 @@ const ButtonContainer = styled.div`
   width: 100%;
   max-width: 450px;
   display: flex;
+  margin: 20px 0 30px 0;
 
   div {
     margin-left: 5%;
@@ -48,11 +49,11 @@ const HomeSection = () => {
         <DownloadButton language={language}></DownloadButton>
         <LanguageButton></LanguageButton>
       </ButtonContainer>
-      <Content
-        dangerouslySetInnerHTML={{
-          __html: data.paragraphs.join(""),
-        }}
-      ></Content>
+      <Content>
+        {data.paragraphs.map((el, i) => (
+          <p>{el}</p>
+        ))}
+      </Content>
     </Section>
   );
 };

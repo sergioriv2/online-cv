@@ -120,24 +120,6 @@ const ToggleButton = styled.div`
   }}
 `;
 
-const initialValues = [
-  {
-    goTo: "home",
-    desc: "inicio",
-    icon: "home",
-  },
-  {
-    goTo: "about",
-    desc: "acerca de mi",
-    icon: "user",
-  },
-  {
-    goTo: "porfolio",
-    desc: "porfolio",
-    icon: "folder-tree",
-  },
-];
-
 export const Aside = () => {
   const [selected, setSelected] = useState("home");
   const [show, setShow] = useState(true);

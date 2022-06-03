@@ -27,13 +27,15 @@
             ],
             "sections": {
               "welcome": {
-                "header": "bienvenido",
+                "header": "Hola, soy Sergio Rivera. \n Un desarrollador.",
                 "download": {
                   "desc": "Descargar CV"
                 },
                 "paragraphs": [
-                  "<p>Te doy la bienvenida a mi página, acá encontrarás información adicional para conocerme mejor, además también encontrarás mi porfolio. </p>",
-                  "<p>Soy Sergio Rivera, nací en Texas, Estados Unidos. Vivo en Buenos Aires, Argentina. En cuanto a mis estudios académicos, cuento con secundario completo, además de que a inicios de 2022 me recibí como Tecnico Superior en Programación en la UTN de General Pacheco, Buenos Aires, Argentina</p>"
+                  "¡Hola! Soy Sergio Rivera, un desarrollador MERN/Full Stack de Buenos Aires Argentina, actualmente en busca de oportunidades laborales como desarrollador",
+                  "¿Qué es un desarrollador MERN/Full stack? En resumen, hay tres tipos de desarrolladores. Primero, tenemos desarrolladores front-end, se enfocan en que las páginas web se vean atractivas para los usuarios finales, y además que funcionen perfectamente. Por otro lado, tenemos los desarrolladores back-end, los cuales se encargan de diseñar, modificar o reparar los sistemas de información del lado del servidor. Finalmente, tenemos los desarrolladores full-stack, una mezcla entre desarrolladores front-end y back-end.",
+                  "Pero, ¿qué significa MERN? MERN es un framework de desarrollo web, que consta de MongoDB, Express, React JS y Node. El framework es muy poderoso, ¿Tienes alguna idea de aplicación? Hagámoslo realidad",
+                  "Gracias a mis habilidades y conocimientos técnicos puedo entregar proyectos de alta calidad"
                 ]
               },
               "aboutMe": {
@@ -130,10 +132,12 @@
             ],
             "sections": {
               "welcome": {
-                "header": "Welcome",
+                "header": "Hello, I'm Sergio Rivera.\n I'm a developer.",
                 "paragraphs": [
-                  "<p>Welcome to my personal website!, here you may find aditional information about myself. This way people who visits this page might know more about me and also see my porfolio.</p>",
-                  "<p>My name is Sergio Rivera, I was born in Texas, U.S. Right now I am living in Buenos Aires. I have completed high school and in beggings from 2020 I graduated from college with a Technician Programming Seniority degree at Universidad Tecnologica Nacional, General Pacheco, Buenos Aires, Argentina</p>"
+                  "Hello! I am Sergio Rivera, a 20-year-old MERN/Full stack developer from Buenos Aires Argentina, currently looking for any cool job opportunities as a developer.",
+                  "What is a MERN/Full stack developer? To sum up, there are three types of developers. First, we have front-end developers, they focus web pages looks attractive to final users, while it works perfectly.  On the other hand, we have the back-end developers, which, they are in charge to design, modify or repair information systems from the server side. Finally, we have the full-stack developers, a mix between both front and back-end developers.",
+                  "But what does MERN stands for? MERN is a web development framework, which consists of MongoDB, Express, React JS and Node. MERN is a powerful framework, so, do you have any application idea? Let's make it a reality.",
+                  "Thanks to my technical skills and knowledge I can deliver high quality projects."
                 ],
                 "download": {
                   "desc": "Download CV"
@@ -142,28 +146,28 @@
               "aboutMe": {
                 "header": "About me",
                 "paragraphs": [
-                  "The principal idea from this section is answer a few frequent questions recruiters ask to devs."
+                  "The principal idea from this section is answer a few frequent questions recruiters ask to us devs."
                 ],
                 "qa": [
                   {
                     "question": "Who are you?",
-                    "answer": "I'm a MERN/Full Stack developer, that means I'm responsible on developing the front end and the back end logic in my applications."
+                    "answer": "I am a MERN/Full Stack developer. I am in charge on developing the front and back-end logic in my programs."
                   },
                   {
                     "question": "How would you discribe yourself?",
-                    "answer": "Since I was a child I've always been interested and feel curiosity in technology and computers, due to that I've found myself in sometroubles. Now as an adult I consider myself as a curious, responsible and loyal person."
+                    "answer": "Since I was a child, I have always been attracted in tech and been curious knowing how computers work. Now, as an adult I consider myself as a curious, responsible, and loyal person."
                   },
                   {
                     "question": "Why should we hire you?",
-                    "answer": "As the way I see it, I find myself as someone with big potential. Besides, I always work to the fullest with the best energy and respect to everyone."
+                    "answer": "I find myself as someone with big potential. I always try to work to the fullest with the best energy and same respect to everyone."
                   },
                   {
                     "question": "Do you have any previous experience?",
-                    "answer": "At this time I don't. Nowadays, speaking about my own, it is difficult find jobs oportunities due that most employers require people with experience."
+                    "answer": "At this time, I don't. Nowadays, from my perspective, it is difficult find jobs opportunities because most of employees postulations requires people with experience."
                   },
                   {
                     "question": "What technologies do you know?",
-                    "answer": "I have knowledge using React (Redux, Router, Hooks), MongoDB, Express, NodeJS, SQL Server, MySQL and also PHP and ASP"
+                    "answer": "I have knowledge using React (Redux, Router, Hooks), MongoDB, Express, NodeJS, SQL Server, MySQL. I can mention too PHP and ASP"
                   }
                 ]
               },

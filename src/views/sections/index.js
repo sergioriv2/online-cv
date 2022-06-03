@@ -8,7 +8,7 @@ import styled from "styled-components";
 
 const Layout = styled.div`
   & > section:nth-child(1) {
-    margin-top: 120px;
+    margin-top: 150px;
   }
 
   @media screen and (min-width: 768px) {

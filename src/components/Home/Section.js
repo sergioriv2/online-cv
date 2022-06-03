@@ -16,10 +16,14 @@ const Content = styled.article`
   }
 
   & > h1 {
-    font-size: 3.5em;
+    font-size: 2.5em;
     text-align: left;
-    padding: 10px 0;
+    padding: 5px 0;
+    text-transform: capitalize;
+    white-space: pre-line;
+    line-height: 1.5em;
     color: var(--primary);
+    font-family: "Raleway", sans-serif;
   }
 
   & .anchor {

@@ -1,6 +1,5 @@
 import styled from "styled-components";
-import { Avatar } from "../Avatar";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { PageContext } from "../../context/pageContext";
 import useMenuOptions from "../../hooks/useMenuOptions";
 

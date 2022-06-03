@@ -123,7 +123,7 @@ const Button = styled.a`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 158px;
+  width: 85px;
   background-color: var(--text);
   cursor: pointer;
   text-decoration: none;
@@ -185,11 +185,19 @@ const Project = (props) => {
 
   return (
     <Layout>
-      <h6>{`${language === "es" ? "INICIO" : "START"} ${new Date(
-        date.start
-      ).getFullYear()} | ${language === "es" ? "FIN" : "END"} ${new Date(
-        date.end
-      ).getFullYear()}`}</h6>
+      {!project?.unfinished ? (
+        <h6>{`${language === "es" ? "INICIO" : "START"} ${new Date(
+          date.start
+        ).getFullYear()} | ${language === "es" ? "FIN" : "END"} ${new Date(
+          date.end
+        ).getFullYear()}`}</h6>
+      ) : (
+        <h6>{`${language === "es" ? "INICIO" : "START"} ${new Date(
+          date.start
+        ).getFullYear()} | ${
+          language === "es" ? "EN DESARROLLO" : "STILL IN DEVELOPMENT"
+        }`}</h6>
+      )}
       <h3>{`0${index + 1}. ${title}`}</h3>
       <DetailsLayout DynamicReverse={index}>
         <Details>
@@ -203,7 +211,7 @@ const Project = (props) => {
             ))}
           </ul>
           <Button href={repository} target="_blank">
-            <span>Repositorio</span>
+            <span>Repo</span>
           </Button>
         </Details>
 
