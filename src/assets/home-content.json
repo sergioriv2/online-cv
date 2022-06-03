@@ -54,15 +54,15 @@
                   },
                   {
                     "question": "¿Por qué debería contratarte?",
-                    "answer": "Desde mi punto de vista, me considero como alguien con gran potencial, además siempre que trabajo doy lo mejor de mi, con las mejores energías y con el mayor respeto hacia todos."
+                    "answer": "Me considero como alguien con gran potencial, además siempre que trabajo doy lo mejor de mi, con la mejor energía y con el mayor respeto hacia todos."
                   },
                   {
                     "question": "¿Cuál es tu experiencia laboral?",
-                    "answer": "Por el momento, ninguna. Hoy en día, para mí, es dificil encontrar oportunidades laborales. La mayoría de los cargos requieren personas con experiencia previa."
+                    "answer": "Por el momento, cuento con proyectos personales que encontrarán mas abajo. Cuentan con el enlace al repositorio e imagenes ilustrativas."
                   },
                   {
-                    "question": "¿Qué tecnologías sabes usar?",
-                    "answer": "Entra las que más conozco podría destacar: React (Redux, Router, Hooks), MongoDB, Express, NodeJS, SQL Server, MySQL y ASP"
+                    "question": "¿Cuáles son tus conocimientos?",
+                    "answer": "En el front end tengo conocimientos en: React (Redux, Router, Hooks), HTML/CSS, JavaScript, Bootstrap, MVC. Por el back end conozco NodeJS, Express, Bases de datos relacionales (SQL Server, MySQL, PostgreSQL), .NET. Entre otros conocimientos también puedo nombrar SCRUM (Jira)"
                   }
                 ]
               },
@@ -163,11 +163,11 @@
                   },
                   {
                     "question": "Do you have any previous experience?",
-                    "answer": "At this time, I don't. Nowadays, from my perspective, it is difficult find jobs opportunities because most of employees postulations requires people with experience."
+                    "answer": "At the moment, I have personal projects that you will find below. They have the link to the repository and illustrative images."
                   },
                   {
-                    "question": "What technologies do you know?",
-                    "answer": "I have knowledge using React (Redux, Router, Hooks), MongoDB, Express, NodeJS, SQL Server, MySQL. I can mention too PHP and ASP"
+                    "question": "Which skills do you have?",
+                    "answer": "First, in the front-end I have knowledge in: React (Redux, Router, Hooks), HTML/CSS, JavaScript, Bootstrap, MVC. Whereas in the back-end I know NodeJS, Express, Relational Databases (SQL Server, MySQL, PostgreSQL), .NET. Among other knowledge I can also mention SCRUM (Jira)"
                   }
                 ]
               },
