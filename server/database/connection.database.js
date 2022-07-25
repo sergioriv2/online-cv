@@ -2,10 +2,31 @@ const mongoose = require("mongoose");
 
 const connection = async () => {
   try {
-    await mongoose.connect(process.env.MONGODBCNN, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    switch (process.env.NODE_ENVIRONMENT) {
+      case "TESTING":
+        mongoose.connect(process.env.MONGODBCNN_TEST, {
+          useNewUrlParser: true,
+          useUnifiedTopology: true,
+        });
+        break;
+      case "DEVELOPMENT":
+        mongoose.connect(process.env.MONGODBCNN_DEV, {
+          useNewUrlParser: true,
+          useUnifiedTopology: true,
+        });
+        break;
+      case "PRODUCTION":
+        mongoose.connect(process.env.MONGODBCNN_PRODUCTION, {
+          useNewUrlParser: true,
+          useUnifiedTopology: true,
+        });
+        break;
+      default:
+        mongoose.connect(process.env.MONGODBCNN_TEST, {
+          useNewUrlParser: true,
+          useUnifiedTopology: true,
+        });
+    }
 
     console.log("Base de datos en linea");
   } catch (err) {
