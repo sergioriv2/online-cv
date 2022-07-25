@@ -20,7 +20,7 @@ const router = Router();
 router.get("/", getProjects);
 
 // Get specific project
-router.get("/:projectId", getProject);
+// router.get("/:projectId", getProject);
 
 // ===============================
 // PUT
