@@ -15,6 +15,10 @@ const meSchema = Schema({
   // Profile Image Link
   image: {
     type: String,
+    required: false,
+  },
+  username: {
+    type: String,
     required: true,
   },
   // Profile Password
@@ -30,6 +34,7 @@ const meSchema = Schema({
   // Academic background
   academic_background: [
     {
+      required: false,
       institution: {
         type: String,
         required: true,
@@ -45,7 +50,7 @@ const meSchema = Schema({
         },
         end: {
           type: Schema.Types.Date,
-          required: false,
+          required: true,
         },
       },
     },
