@@ -1,37 +1,62 @@
 const { Schema, model } = require("mongoose");
 
 const projectSchema = Schema({
+  // Project Title
   title: {
-    type: String,
-    required: true,
+    es: {
+      type: String,
+      required: true,
+    },
+    en: {
+      type: String,
+      required: false,
+    },
   },
+  // Project descriptions
+  description: {
+    es: {
+      type: String,
+      required: true,
+    },
+    en: {
+      type: String,
+      required: true,
+    },
+  },
+  // Project status (Should display or not?)
   status: {
     type: Boolean,
     required: false,
     default: true,
   },
-  date: {
+  // Important dates
+  dates: {
     start: {
       type: Schema.Types.Date,
       required: true,
     },
     end: {
       type: Schema.Types.Date,
-      required: true,
+      required: false,
     },
   },
-  deploy: {
-    type: String,
-    required: false,
+  // Project links
+  links: {
+    deploy: {
+      type: String,
+      required: false,
+    },
+    repository: {
+      type: String,
+      required: false,
+    },
   },
-  repository: {
-    type: String,
-    required: true,
-  },
-  softwares: {
-    type: Array,
-    required: true,
-  },
+  // Project softwares
+  softwares: [
+    {
+      type: String,
+    },
+  ],
 });
 
 projectSchema.methods.toJSON = function () {
