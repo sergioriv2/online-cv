@@ -4,7 +4,10 @@ const getAll = async (req, res) => {
   try {
     const results = await Section.find();
 
-    return res.status.json({
+    if (!results || results.length === 0)
+      return res.status(404).json({ ok: false, msg: "Not found." });
+
+    return res.json({
       ok: true,
       results,
     });
