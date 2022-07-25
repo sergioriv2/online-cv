@@ -1,0 +1,214 @@
+  {
+    "lang": {
+      "es": {
+        "page": {
+          "home": {
+            "asideMenu": [
+              {
+                "desc": "Inicio",
+                "goTo": "home",
+                "icon": "home"
+              },
+              {
+                "desc": "Acerca de mi",
+                "goTo": "about",
+                "icon": "user"
+              },
+              {
+                "desc": "Porfolio",
+                "goTo": "porfolio",
+                "icon": "folder-tree"
+              },
+              {
+                "desc": "Educación",
+                "goTo": "education",
+                "icon": "graduation-cap"
+              }
+            ],
+            "sections": {
+              "welcome": {
+                "header": "Hola, soy Sergio Rivera. \n Un desarrollador.",
+                "download": {
+                  "desc": "Descargar CV"
+                },
+                "paragraphs": [
+                  "¡Hola! Soy Sergio Rivera, un desarrollador MERN/Full Stack de Buenos Aires Argentina, actualmente en busca de oportunidades laborales como desarrollador",
+                  "¿Qué es un desarrollador MERN/Full stack? En resumen, hay tres tipos de desarrolladores. Primero, tenemos desarrolladores front-end, se enfocan en que las páginas web se vean atractivas para los usuarios finales, y además que funcionen perfectamente. Por otro lado, tenemos los desarrolladores back-end, los cuales se encargan de diseñar, modificar o reparar los sistemas de información del lado del servidor. Finalmente, tenemos los desarrolladores full-stack, una mezcla entre desarrolladores front-end y back-end.",
+                  "Pero, ¿qué significa MERN? MERN es un framework de desarrollo web, que consta de MongoDB, Express, React JS y Node. El framework es muy poderoso, ¿Tienes alguna idea de aplicación? Hagámoslo realidad",
+                  "Gracias a mis habilidades y conocimientos técnicos puedo entregar proyectos de alta calidad"
+                ]
+              },
+              "aboutMe": {
+                "header": "Acerca de mi",
+                "paragraphs": [
+                  "La idea principal de esta sección es contestar unas preguntas frecuentes que hacen los recruiters/empleadores a nosotros los devs."
+                ],
+                "qa": [
+                  {
+                    "question": "¿Quién eres?",
+                    "answer": "Soy un MERN/Full Stack developer, eso quiere decir que en las aplicaciones que desarrollo me encargo tanto del front end así como también de la lógica del back end."
+                  },
+                  {
+                    "question": "¿Cómo te describirías?",
+                    "answer": "Me describiría como una persona curiosa, responsable y leal. Desde que era chico siempre me interesó todo lo relacionado con la tecnología, por eso disfruto de lo que hago."
+                  },
+                  {
+                    "question": "¿Por qué debería contratarte?",
+                    "answer": "Me considero como alguien con gran potencial, además siempre que trabajo doy lo mejor de mi, con la mejor energía y con el mayor respeto hacia todos."
+                  },
+                  {
+                    "question": "¿Cuál es tu experiencia laboral?",
+                    "answer": "Por el momento, cuento con proyectos personales que encontrarán mas abajo. Cuentan con el enlace al repositorio e imagenes ilustrativas."
+                  },
+                  {
+                    "question": "¿Cuáles son tus conocimientos?",
+                    "answer": "En el front end tengo conocimientos en: React (Redux, Router, Hooks), HTML/CSS, JavaScript, Bootstrap, MVC. Por el back end conozco NodeJS, Express, Bases de datos relacionales (SQL Server, MySQL, PostgreSQL), .NET. Entre otros conocimientos también puedo nombrar SCRUM (Jira)"
+                  }
+                ]
+              },
+              "education": {
+                "header": "Historial Academico",
+                "data": [
+                  {
+                    "date": {
+                      "start": "2022",
+                      "end": "2022"
+                    },
+                    "title": "Curso completo de React Hooks, Redux, Router",
+                    "where": "Udemy",
+                    "status": "completed",
+                    "average": ""
+                  },
+                  {
+                    "date": {
+                      "start": "2020",
+                      "end": "2022"
+                    },
+                    "title": "Tecnicatura Superior en Programación",
+                    "where": "UTN FRGP, Argentina",
+                    "status": "completed",
+                    "average": ""
+                  },
+                  {
+                    "date": {
+                      "start": "2013",
+                      "end": "2029"
+                    },
+                    "title": "Bachiller en Administración Contable",
+                    "where": "Instituto Federico Dickens, Argentina",
+                    "status": "completed",
+                    "average": ""
+                  }
+                ]
+              }
+            }
+          }
+        }
+      },
+      "en": {
+        "page": {
+          "home": {
+            "asideMenu": [
+              {
+                "desc": "Home",
+                "goTo": "home",
+                "icon": "home"
+              },
+              {
+                "desc": "About Me",
+                "goTo": "about",
+                "icon": "user"
+              },
+              {
+                "desc": "Porfolio",
+                "goTo": "porfolio",
+                "icon": "folder-tree"
+              },
+              {
+                "desc": "Education",
+                "goTo": "education",
+                "icon": "graduation-cap"
+              }
+            ],
+            "sections": {
+              "welcome": {
+                "header": "Hello, I'm Sergio Rivera.\n I'm a developer.",
+                "paragraphs": [
+                  "Hello! I am Sergio Rivera, a 20-year-old MERN/Full stack developer from Buenos Aires Argentina, currently looking for any cool job opportunities as a developer.",
+                  "What is a MERN/Full stack developer? To sum up, there are three types of developers. First, we have front-end developers, they focus web pages looks attractive to final users, while it works perfectly.  On the other hand, we have the back-end developers, which, they are in charge to design, modify or repair information systems from the server side. Finally, we have the full-stack developers, a mix between both front and back-end developers.",
+                  "But what does MERN stands for? MERN is a web development framework, which consists of MongoDB, Express, React JS and Node. MERN is a powerful framework, so, do you have any application idea? Let's make it a reality.",
+                  "Thanks to my technical skills and knowledge I can deliver high quality projects."
+                ],
+                "download": {
+                  "desc": "Download CV"
+                }
+              },
+              "aboutMe": {
+                "header": "About me",
+                "paragraphs": [
+                  "The principal idea from this section is answer a few frequent questions recruiters ask to us devs."
+                ],
+                "qa": [
+                  {
+                    "question": "Who are you?",
+                    "answer": "I am a MERN/Full Stack developer. I am in charge on developing the front and back-end logic in my programs."
+                  },
+                  {
+                    "question": "How would you discribe yourself?",
+                    "answer": "Since I was a child, I have always been attracted in tech and been curious knowing how computers work. Now, as an adult I consider myself as a curious, responsible, and loyal person."
+                  },
+                  {
+                    "question": "Why should we hire you?",
+                    "answer": "I find myself as someone with big potential. I always try to work to the fullest with the best energy and same respect to everyone."
+                  },
+                  {
+                    "question": "Do you have any previous experience?",
+                    "answer": "At the moment, I have personal projects that you will find below. They have the link to the repository and illustrative images."
+                  },
+                  {
+                    "question": "Which skills do you have?",
+                    "answer": "First, in the front-end I have knowledge in: React (Redux, Router, Hooks), HTML/CSS, JavaScript, Bootstrap, MVC. Whereas in the back-end I know NodeJS, Express, Relational Databases (SQL Server, MySQL, PostgreSQL), .NET. Among other knowledge I can also mention SCRUM (Jira)"
+                  }
+                ]
+              },
+              "education": {
+                "header": "Academic Background",
+                "data": [
+                  {
+                    "date": {
+                      "start": "2022",
+                      "end": "2022"
+                    },
+                    "title": "React Hooks, Redux, Router Course",
+                    "where": "Udemy",
+                    "status": "completed",
+                    "average": ""
+                  },
+                  {
+                    "date": {
+                      "start": "2020",
+                      "end": "2022"
+                    },
+                    "title": "Programming Senior Technician",
+                    "where": "UTN FRGP, Argentina",
+                    "status": "completed",
+                    "average": ""
+                  },
+                  {
+                    "date": {
+                      "start": "2013",
+                      "end": "2029"
+                    },
+                    "title": "Bachelor's Degree in Counting Administration",
+                    "where": "Instituto Federico Dickens, Argentina",
+                    "status": "completed",
+                    "average": ""
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
