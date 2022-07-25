@@ -3,7 +3,7 @@ const Project = require("../models/project.models");
 const getProjects = async (req, res) => {
   try {
     const projects = await Project.find().select(
-      "date title description softwares repository unfinished"
+      "dates title description softwares links"
     );
     return res.status(200).json({ results: projects, ok: true });
   } catch (err) {
@@ -27,15 +27,14 @@ const getProject = async (req, res) => {
   }
 };
 
-const postProject = async (req, res, next) => {
+const postProject = async (req, res) => {
   try {
-    const { lang, title, date, description, repository, softwares } = req.body;
+    const { title, dates, description, links, softwares } = req.body;
     const newProject = new Project({
-      lang,
       title,
-      date,
+      dates,
       description,
-      repository,
+      links,
       softwares,
     });
 
@@ -47,21 +46,21 @@ const postProject = async (req, res, next) => {
   }
 };
 
-const putProject = async (req, res, next) => {
+const putProject = async (req, res) => {
   try {
     const { projectId } = req.params;
 
-    const { date, description, repository, title } = req.body;
+    const { dates, description, links, title } = req.body;
 
     const project = await Project.findById(projectId);
 
     if (!project)
       return res.status(404).send({ msg: "Project not found", ok: false });
 
-    date ? (project.date = date) : null;
-    description ? (project.description = description) : null;
-    repository ? (project.repository = repository) : null;
-    title ? (project.title = title) : null;
+    project.dates = dates;
+    project.description = description;
+    project.links = links;
+    project.title = title;
 
     await project.save();
 
@@ -72,7 +71,7 @@ const putProject = async (req, res, next) => {
   }
 };
 
-const deleteProject = async (req, res, next) => {
+const deleteProject = async (req, res) => {
   try {
     const { projectId } = req.params;
 
@@ -81,7 +80,13 @@ const deleteProject = async (req, res, next) => {
     if (!project)
       return res.status(400).json({ msg: "Project not found", ok: false });
 
-    return res.status(200).json({ ok: true });
+    project.status = false;
+
+    await project.save();
+
+    return res
+      .status(200)
+      .json({ ok: true, msg: "Project deleted successfully" });
   } catch (err) {
     console.log(err.message);
     res.status(500).send({ msg: "Internal Server Error", ok: false });
