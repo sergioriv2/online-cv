@@ -6,7 +6,7 @@ const {
   putProject,
   postProject,
   deleteProject,
-} = require("../controllers/projects.controllers");
+} = require("../controllers/projects.controller");
 
 const { validateFields } = require("../middlewares/validateFields.middlewares");
 

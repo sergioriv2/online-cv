@@ -1,7 +1,7 @@
 const { Router } = require("express");
 const { check } = require("express-validator");
 
-const { getInformation, update } = require("../controllers/me.controllers");
+const { getInformation, update } = require("../controllers/me.controller");
 
 const router = Router();
 

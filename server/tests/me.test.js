@@ -1,5 +1,5 @@
 const supertest = require("supertest");
-const Server = require("../models/server.models");
+const Server = require("../models/server.model");
 const Me = require("../models/me.model");
 
 const app = new Server();

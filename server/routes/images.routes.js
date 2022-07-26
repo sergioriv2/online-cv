@@ -5,7 +5,7 @@ const {
   getImages,
   getProjectImages,
   postImage,
-} = require("../controllers/images.controllers");
+} = require("../controllers/images.controller");
 
 const router = Router();
 
