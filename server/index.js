@@ -2,6 +2,10 @@ require("dotenv").config();
 
 const Server = require("./models/server.models");
 
-const server = new Server();
+const app = new Server();
 
-server.listen();
+// app.openConnection().then(() => {
+//   app.listen();
+// });
+
+exports.module = app;

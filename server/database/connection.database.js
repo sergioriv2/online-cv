@@ -1,12 +1,16 @@
 const mongoose = require("mongoose");
 
-const connection = async () => {
+const dotenv = require("dotenv");
+
+dotenv.config();
+
+const openCn = async () => {
   try {
     switch (process.env.NODE_ENVIRONMENT) {
       case "TESTING":
         mongoose.connect(process.env.MONGODBCNN_TEST, {
           useNewUrlParser: true,
-          useUnifiedTopology: true,
+          useUnifiedTopology: false,
         });
         break;
       case "DEVELOPMENT":
@@ -35,4 +39,15 @@ const connection = async () => {
   }
 };
 
-module.exports = connection;
+const closeCn = async () => {
+  try {
+    await mongoose.connection.close();
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+module.exports = {
+  openCn,
+  closeCn,
+};

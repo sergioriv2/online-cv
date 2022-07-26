@@ -3,7 +3,7 @@ const Me = require("../models/me.model");
 const getInformation = async (req, res) => {
   try {
     const me = await Me.findOne({ username: "serivera" }).select(
-      "names image resume academic_background"
+      "names image resume"
     );
 
     return res.json({ ok: true, results: me });

@@ -1,5 +1,5 @@
 const express = require("express");
-const db = require("../database/connection.database");
+const { openCn, closeCn } = require("../database/connection.database");
 const cors = require("cors");
 const morgan = require("morgan");
 
@@ -15,13 +15,21 @@ class Server {
     //   descriptions: "/api/descriptions",
     // };
 
-    this.dbConnection();
+    // this.openConnection();
     this.middlewares();
     this.routes();
   }
 
-  async dbConnection() {
-    await db();
+  async openConnection() {
+    await openCn();
+  }
+
+  async closeConnection() {
+    await closeCn();
+  }
+
+  getApp() {
+    return this.app;
   }
 
   middlewares() {
@@ -39,9 +47,11 @@ class Server {
   }
 
   listen() {
-    this.app.listen(this.port, () => {
-      console.log("Aplicación en el puerto " + this.port);
-    });
+    if (process.env.NODE_ENV !== "TESTING") {
+      this.app.listen(this.port, () => {
+        console.log("Aplicación en el puerto " + this.port);
+      });
+    }
   }
 }
 
