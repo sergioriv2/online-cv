@@ -24,7 +24,7 @@ describe("'/me' endpoint", () => {
   it("should return my information data", async () => {
     const response = await request.get("/api/me");
     expect(response.body).toMatchObject({
-      ok: expect.any(Boolean),
+      ok: true,
       results: expect.objectContaining({
         names: expect.objectContaining({
           firstName: expect.any(String),
@@ -33,17 +33,17 @@ describe("'/me' endpoint", () => {
         image: expect.any(String),
         resume: expect.any(String),
         uid: expect.any(String),
-        // academic_background: expect.arrayContaining([
-        //   expect.objectContaining({
-        //     _id: expect.any(String),
-        //     institution: expect.any(String),
-        //     title: expect.any(String),
-        //     dates: expect.objectContaining({
-        //       start: expect.any(Date),
-        //       end: expect.any(Date),
-        //     }),
-        //   }),
-        // ]),
+        academic_background: expect.arrayContaining([
+          expect.objectContaining({
+            _id: expect.any(String),
+            institution: expect.any(String),
+            title: expect.any(String),
+            dates: expect.objectContaining({
+              start: expect.any(String),
+              end: expect.any(String),
+            }),
+          }),
+        ]),
       }),
     });
   });
@@ -56,7 +56,7 @@ describe("'/me' endpoint", () => {
     });
 
     expect(response.body).toMatchObject({
-      ok: expect.any(Boolean),
+      ok: true,
       results: expect.objectContaining({
         names: expect.objectContaining({
           firstName: "Sergio",

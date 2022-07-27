@@ -34,7 +34,7 @@ describe("'/projects' endpoint", () => {
 
     // Test object returned
     expect(response.body).toMatchObject({
-      ok: expect.any(Boolean),
+      ok: true,
       results: expect.arrayContaining([
         expect.objectContaining({
           uid: expect.any(String),
@@ -85,7 +85,7 @@ describe("'/projects' endpoint", () => {
       .send(newProject);
 
     expect(updatedProject.body).toMatchObject({
-      ok: expect.any(Boolean),
+      ok: true,
       results: expect.objectContaining({
         uid: expect.any(String),
         title: newProject.title,
@@ -125,7 +125,7 @@ describe("'/projects' endpoint", () => {
       .send(newProject);
 
     expect(postedProject.body).toMatchObject({
-      ok: expect.any(Boolean),
+      ok: true,
       results: expect.objectContaining({
         uid: expect.any(String),
         title: newProject.title,
@@ -149,7 +149,7 @@ describe("'/projects' endpoint", () => {
       .expect(200);
 
     expect(deletedProject.body).toMatchObject({
-      ok: expect.any(Boolean),
+      ok: true,
     });
   });
 

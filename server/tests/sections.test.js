@@ -34,7 +34,7 @@ describe("'/sections' endpoint", () => {
 
     // Test object returned
     expect(response.body).toMatchObject({
-      ok: expect.any(Boolean),
+      ok: true,
       results: expect.arrayContaining([
         expect.objectContaining({
           uid: expect.any(String),
@@ -71,7 +71,7 @@ describe("'/sections' endpoint", () => {
       .send(updateSection);
 
     expect(updatedSection.body).toMatchObject({
-      ok: expect.any(Boolean),
+      ok: true,
       results: expect.objectContaining({
         title: updateSection.title,
         description: updateSection.description,
@@ -99,7 +99,7 @@ describe("'/sections' endpoint", () => {
     const { body: sections } = await request.get("/api/sections");
 
     expect(updatedSection.body).toMatchObject({
-      ok: expect.any(Boolean),
+      ok: true,
       results: expect.objectContaining({
         title: newSection.title,
         description: newSection.description,
