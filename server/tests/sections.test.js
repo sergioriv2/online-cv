@@ -1,8 +1,15 @@
 const Section = require("../models/section.model");
+const Me = require("../models/me.model");
 
-const { initialSections, request, app } = require("./helpers");
+const {
+  initialSections,
+  initialInformation,
+  request,
+  app,
+} = require("./helpers");
 
 describe("'/sections' endpoint", () => {
+  let token;
   beforeAll(async () => {
     await Section.deleteMany({});
     const [initialSections1, initialSections2] = initialSections;
@@ -12,6 +19,18 @@ describe("'/sections' endpoint", () => {
 
     await section1.save();
     await section2.save();
+
+    // Reset user
+    await Me.deleteMany({});
+    const newMe = new Me(initialInformation);
+    await newMe.save();
+
+    const tokenResponse = await request.post("/api/auth/login").send({
+      username: initialInformation.username,
+      password: initialInformation.password,
+    });
+
+    token = tokenResponse.body.results.token;
   });
 
   it("should be defined", (done) => {
@@ -63,7 +82,10 @@ describe("'/sections' endpoint", () => {
       },
     };
 
-    const { body: sectionsResponse } = await request.get("/api/sections/");
+    const { body: sectionsResponse } = await request
+      .get("/api/sections/")
+      .expect(200)
+      .set("X-Api-Key", token);
     const [sectionToUpdate] = sectionsResponse.results;
 
     const updatedSection = await request
@@ -94,7 +116,9 @@ describe("'/sections' endpoint", () => {
 
     const updatedSection = await request
       .post("/api/sections/")
-      .send(newSection);
+      .expect(201)
+      .send(newSection)
+      .set("X-Api-Key", token);
 
     const { body: sections } = await request.get("/api/sections");
 

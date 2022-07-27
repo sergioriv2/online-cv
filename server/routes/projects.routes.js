@@ -9,6 +9,7 @@ const {
 } = require("../controllers/projects.controller");
 
 const { validateFields } = require("../middlewares/validateFields.middlewares");
+const { validateJWT } = require("../middlewares/validateJWT");
 
 const router = Router();
 
@@ -23,7 +24,7 @@ router.get("/", getProjects);
 // PUT
 // ==============================
 
-router.put("/:projectId", putProject);
+router.put("/:projectId", [validateJWT], putProject);
 
 // ===============================
 // POST
@@ -33,6 +34,7 @@ router.put("/:projectId", putProject);
 router.post(
   "/",
   [
+    validateJWT,
     check("title.es", "'spanish title' field is required.")
       .notEmpty()
       .isString()
@@ -57,12 +59,12 @@ router.post(
       .notEmpty()
       .isString()
       .withMessage("'repository' field must be a string."),
-    check("images.thumbnail", "'thumbnail'  field must be a string.")
-      .isString()
+    check("images.thumbnail", "'thumbnail' field must be an URL.")
+      .isURL()
       .optional(),
-    check("images.original", "'original image' field is required.")
+    check("images.original", "'original image' field must be an URL.")
       .notEmpty()
-      .isString()
+      .isURL()
       .withMessage("'original image' field must be a string."),
     check("links.deploy", "'deploy' field must be a string.").isString(),
     check("softwares", "'softwares' field is required.").notEmpty().isArray(),
@@ -75,6 +77,6 @@ router.post(
 // DELETE
 // ==============================
 
-router.delete("/:projectId", deleteProject);
+router.delete("/:projectId", [validateJWT], deleteProject);
 
 module.exports = router;
