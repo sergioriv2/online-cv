@@ -3,6 +3,7 @@ const { check } = require("express-validator");
 
 const { getInformation, update } = require("../controllers/me.controller");
 const { validateFields } = require("../middlewares/validateFields.middlewares");
+const { validateJWT } = require("../middlewares/validateJWT");
 
 const router = Router();
 
@@ -14,6 +15,7 @@ router.get("/", getInformation);
 router.put(
   "/",
   [
+    validateJWT,
     check("names.firstName", "'firstName' field must be a string.")
       .isString()
       .optional(),

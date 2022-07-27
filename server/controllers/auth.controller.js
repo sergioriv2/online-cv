@@ -13,11 +13,10 @@ const login = async (req, res) => {
     if (me.password !== submitted_password)
       return res.status(400).json({ ok: false, msg: "Bad Request" });
 
-    console.log(me);
-
-    const { password, username, ...payload } = me;
-
-    const token = await generateJWT(payload);
+    const token = await generateJWT({
+      uid: me._id,
+      names: me.names,
+    });
 
     return res.status(200).json({ ok: true, results: { token } });
   } catch (err) {

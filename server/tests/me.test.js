@@ -2,11 +2,19 @@ const Me = require("../models/me.model");
 const { initialInformation, request, app } = require("./helpers");
 
 describe("'/me' endpoint", () => {
+  let token;
+
   beforeAll(async () => {
     await Me.deleteMany({});
     const newMe = new Me(initialInformation);
-
     await newMe.save();
+
+    const tokenResponse = await request.post("/api/auth/login").send({
+      username: initialInformation.username,
+      password: initialInformation.password,
+    });
+
+    token = tokenResponse.body.results.token;
   });
 
   it("should be defined", (done) => {
@@ -56,7 +64,8 @@ describe("'/me' endpoint", () => {
       await request
         .put("/api/me")
         .expect(200)
-        .expect("content-type", /application\/json/);
+        .expect("content-type", /application\/json/)
+        .set("X-Api-Key", token);
     });
 
     describe("-- Send data without any errors", () => {
@@ -71,7 +80,8 @@ describe("'/me' endpoint", () => {
         const response = await request
           .put("/api/me")
           .send(updatedData)
-          .expect(200);
+          .expect(200)
+          .set("X-Api-Key", token);
 
         expect(response.body).toMatchObject({
           ok: true,
@@ -90,7 +100,8 @@ describe("'/me' endpoint", () => {
         const response = await request
           .put("/api/me")
           .send(updatedData)
-          .expect(200);
+          .expect(200)
+          .set("X-Api-Key", token);
         expect(response.body).toMatchObject({
           ok: true,
           results: expect.objectContaining({
@@ -108,7 +119,8 @@ describe("'/me' endpoint", () => {
         const response = await request
           .put("/api/me")
           .send(updatedData)
-          .expect(200);
+          .expect(200)
+          .set("X-Api-Key", token);
         expect(response.body).toMatchObject({
           ok: true,
           results: expect.objectContaining({
@@ -126,7 +138,8 @@ describe("'/me' endpoint", () => {
         const response = await request
           .put("/api/me")
           .send(updatedData)
-          .expect(200);
+          .expect(200)
+          .set("X-Api-Key", token);
         expect(response.body).toMatchObject({
           ok: true,
           results: expect.objectContaining({
@@ -144,7 +157,8 @@ describe("'/me' endpoint", () => {
         const response = await request
           .put("/api/me")
           .send(updatedData)
-          .expect(200);
+          .expect(200)
+          .set("X-Api-Key", token);
         expect(response.body).toMatchObject({
           ok: true,
           results: expect.objectContaining({
@@ -171,7 +185,8 @@ describe("'/me' endpoint", () => {
         const response = await request
           .put("/api/me")
           .send(updatedData)
-          .expect(200);
+          .expect(200)
+          .set("X-Api-Key", token);
 
         const { results } = response.body;
         const { academic_background } = results;
@@ -190,11 +205,14 @@ describe("'/me' endpoint", () => {
 
     describe("-- Send data with errors", () => {
       test("don't send a firstname string in the req. body", async () => {
-        const response = await request.put("/api/me").send({
-          names: {
-            firstName: true,
-          },
-        });
+        const response = await request
+          .put("/api/me")
+          .send({
+            names: {
+              firstName: true,
+            },
+          })
+          .set("X-Api-Key", token);
 
         expect(response.body).toContainEqual(
           expect.objectContaining({
@@ -205,11 +223,14 @@ describe("'/me' endpoint", () => {
       });
 
       test("don't send a lastname string in the req. body", async () => {
-        const response = await request.put("/api/me").send({
-          names: {
-            lastName: false,
-          },
-        });
+        const response = await request
+          .put("/api/me")
+          .send({
+            names: {
+              lastName: false,
+            },
+          })
+          .set("X-Api-Key", token);
 
         expect(response.body).toContainEqual(
           expect.objectContaining({
@@ -220,9 +241,12 @@ describe("'/me' endpoint", () => {
       });
 
       test("don't send an image URL string in the req. body", async () => {
-        const response = await request.put("/api/me").send({
-          image: "url",
-        });
+        const response = await request
+          .put("/api/me")
+          .send({
+            image: "url",
+          })
+          .set("X-Api-Key", token);
 
         expect(response.body).toContainEqual(
           expect.objectContaining({
@@ -233,9 +257,12 @@ describe("'/me' endpoint", () => {
       });
 
       test("don't send an username string in the req. body", async () => {
-        const response = await request.put("/api/me").send({
-          username: 3.1416,
-        });
+        const response = await request
+          .put("/api/me")
+          .send({
+            username: 3.1416,
+          })
+          .set("X-Api-Key", token);
 
         expect(response.body).toContainEqual(
           expect.objectContaining({
@@ -246,9 +273,12 @@ describe("'/me' endpoint", () => {
       });
 
       test("don't send an password string in the req. body", async () => {
-        const response = await request.put("/api/me").send({
-          password: 3.1416,
-        });
+        const response = await request
+          .put("/api/me")
+          .send({
+            password: 3.1416,
+          })
+          .set("X-Api-Key", token);
 
         expect(response.body).toContainEqual(
           expect.objectContaining({
@@ -259,9 +289,12 @@ describe("'/me' endpoint", () => {
       });
 
       test("don't send a resume string in the req. body", async () => {
-        const response = await request.put("/api/me").send({
-          resume: false,
-        });
+        const response = await request
+          .put("/api/me")
+          .send({
+            resume: false,
+          })
+          .set("X-Api-Key", token);
 
         expect(response.body).toContainEqual(
           expect.objectContaining({
@@ -272,9 +305,12 @@ describe("'/me' endpoint", () => {
       });
 
       test("don't send an academic_background array in the req. body", async () => {
-        const response = await request.put("/api/me").send({
-          academic_background: false,
-        });
+        const response = await request
+          .put("/api/me")
+          .send({
+            academic_background: false,
+          })
+          .set("X-Api-Key", token);
 
         expect(response.body).toContainEqual(
           expect.objectContaining({

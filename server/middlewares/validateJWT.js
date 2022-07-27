@@ -5,7 +5,6 @@ const validateJWT = async (req, res, next) => {
   // API key required in request header
   const apiKey = req.header("X-Api-key");
 
-  // TODO: Errcode
   if (!apiKey) {
     return res.status(401).json({
       msg: "An API key is required in the request header.",
@@ -25,13 +24,6 @@ const validateJWT = async (req, res, next) => {
     if (!userData) {
       return res.status(401).json({ msg: "Invalid API Key.", ok: false });
     }
-
-    // // Verify if the user was deleted
-    // if (userData.deletedAt) {
-    //   return res.status(401).json({ msg: "Invalid API Key.", ok: false });
-    // }
-
-    // Once the JWT has been verified, return the user data on the request
     req.user = user;
     next();
   } catch (err) {
