@@ -23,6 +23,7 @@ describe("'/me' endpoint", () => {
 
   it("should return my information data", async () => {
     const response = await request.get("/api/me");
+
     expect(response.body).toMatchObject({
       ok: true,
       results: expect.objectContaining({
