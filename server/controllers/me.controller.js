@@ -17,16 +17,15 @@ const getInformation = async (req, res) => {
 };
 
 const update = async (req, res) => {
-  const { fName, lName, image, password, resume, academic_background } =
-    req.body;
+  const { names, image, password, resume, academic_background } = req.body;
 
   try {
     const me = await Me.findOne({ username: "serivera" });
 
     if (!me) return res.status(404).json({ ok: false, msg: "Not found." });
 
-    fName ? (me.names.firstName = fName) : null;
-    lName ? (me.names.lastName = lName) : null;
+    names?.firstName ? (me.names.firstName = names?.firstName) : null;
+    names?.lastName ? (me.names.lastName = names?.lastName) : null;
 
     image ? (me.images = image) : null;
     password ? (me.password = password) : null;
