@@ -39,7 +39,7 @@ const postProject = async (req, res) => {
     });
 
     const project = await newProject.save();
-    return res.status(200).json({ results: project, ok: true });
+    return res.status(201).json({ results: project, ok: true });
   } catch (err) {
     console.log(err.message);
     return res.status(500).send({ msg: "Internal Server Error", ok: false });
@@ -50,21 +50,22 @@ const putProject = async (req, res) => {
   try {
     const { projectId } = req.params;
 
-    const { dates, description, links, title } = req.body;
+    const { dates, description, links, title, softwares } = req.body;
 
     const project = await Project.findById(projectId);
 
     if (!project)
       return res.status(404).send({ msg: "Project not found", ok: false });
 
-    project.dates = dates;
-    project.description = description;
-    project.links = links;
-    project.title = title;
+    dates ? (project.dates = dates) : null;
+    description ? (project.description = description) : null;
+    links ? (project.links = links) : null;
+    softwares ? (project.softwares = softwares) : null;
+    title ? (project.title = title) : null;
 
     await project.save();
 
-    return res.status(200).json({ ok: true });
+    return res.status(200).json({ ok: true, results: project });
   } catch (err) {
     console.log(err.message);
     return res.status(500).send({ msg: "Internal Server Error", ok: false });

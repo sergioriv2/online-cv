@@ -19,9 +19,6 @@ const router = Router();
 // Get all projects
 router.get("/", getProjects);
 
-// Get specific project
-// router.get("/:projectId", getProject);
-
 // ===============================
 // PUT
 // ==============================
@@ -36,9 +33,30 @@ router.put("/:projectId", putProject);
 router.post(
   "/",
   [
-    check("title", "'title' field is required.").notEmpty(),
-    check("date", "'date' field is required.").notEmpty(),
-    check("repository", "'repository' field is required.").notEmpty(),
+    check("title.es", "'spanish title' field is required.")
+      .notEmpty()
+      .isString()
+      .withMessage("'spanish title' field must be a string."),
+    check("title.en", "'english title' must be a string.")
+      .isString()
+      .withMessage("'english title' field must be a string.")
+      .optional(),
+    check("description.es", "'spanish description' is required.")
+      .notEmpty()
+      .isString()
+      .withMessage("'spanish description' field must be a string."),
+    check("description.en", "'english description' is required.").notEmpty(),
+    check("dates.start", "'started date' field is required.")
+      .notEmpty()
+      .isDate()
+      .withMessage("'started date' field must be a date."),
+    check("dates.end", "'finished date' field must be a date")
+      .isDate()
+      .optional(),
+    check("links.repository", "'repository' field is required.")
+      .notEmpty()
+      .isString("'repository' field must be a string."),
+    check("links.deploy", "'deploy' field must be a string.").isString(),
     check("softwares", "'softwares' field is required.").notEmpty().isArray(),
     validateFields,
   ],

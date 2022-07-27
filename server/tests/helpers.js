@@ -29,4 +29,72 @@ const initialSections = [
   },
 ];
 
-module.exports = { initialSections, request, app };
+const initialProjects = [
+  {
+    title: {
+      es: "Titulo de proyecto 01",
+      en: "Project title 01",
+    },
+    description: {
+      es: "Descripcion de proyecto 01",
+      en: "Project description 01",
+    },
+    dates: {
+      start: new Date(),
+      end: new Date(),
+    },
+    softwares: ["MERN Stack, Jira, Slack"],
+    links: {
+      repository: "https://repo-01.com",
+      deploy: "https://deploy-01.com",
+    },
+  },
+  {
+    title: {
+      es: "Titulo de proyecto 02",
+      es: "Project title 02",
+    },
+    description: {
+      es: "Descripcion de proyecto 02",
+      en: "Project description 02",
+    },
+    dates: {
+      start: new Date(),
+      end: new Date(),
+    },
+    softwares: ["MERN Stack, Jira, Slack"],
+    links: {
+      repository: "https://repo-02.com",
+      deploy: "https://deploy-02.com",
+    },
+  },
+];
+
+const initialInformation = {
+  names: {
+    firstName: "lorem",
+    lastName: "lorem",
+  },
+  username: "serivera",
+  password: "lorem",
+  image: "lorem",
+  resume: "lorem",
+  academic_background: [
+    {
+      institution: "lorem",
+      title: "lorem",
+      dates: {
+        start: new Date(),
+        end: new Date(),
+      },
+    },
+  ],
+};
+
+module.exports = {
+  initialSections,
+  initialInformation,
+  initialProjects,
+  request,
+  app,
+};

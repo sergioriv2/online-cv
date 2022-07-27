@@ -1,8 +1,4 @@
-const supertest = require("supertest");
-const Server = require("../models/server.model");
 const Me = require("../models/me.model");
-
-const app = new Server();
 
 const { initialInformation, request, app } = require("./helpers");
 
