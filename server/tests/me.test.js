@@ -1,5 +1,4 @@
 const Me = require("../models/me.model");
-
 const { initialInformation, request, app } = require("./helpers");
 
 describe("'/me' endpoint", () => {

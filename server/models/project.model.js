@@ -57,6 +57,18 @@ const projectSchema = Schema({
       type: String,
     },
   ],
+  images: [
+    {
+      thumbnail: {
+        type: String,
+        required: false,
+      },
+      original: {
+        type: String,
+        required: true,
+      },
+    },
+  ],
 });
 
 projectSchema.methods.toJSON = function () {

@@ -44,6 +44,16 @@ const initialProjects = [
       end: new Date(),
     },
     softwares: ["MERN Stack, Jira, Slack"],
+    images: [
+      {
+        thumbnail: "http://image-thumbnail-01.com",
+        original: "http://image-original-01.com",
+      },
+      {
+        thumbnail: "http://image-thumbnail-02.com",
+        original: "http://image-original-02.com",
+      },
+    ],
     links: {
       repository: "https://repo-01.com",
       deploy: "https://deploy-01.com",
@@ -63,6 +73,16 @@ const initialProjects = [
       end: new Date(),
     },
     softwares: ["MERN Stack, Jira, Slack"],
+    images: [
+      {
+        thumbnail: "http://image-thumbnail-1.com",
+        original: "http://image-original-1.com",
+      },
+      {
+        thumbnail: "http://image-thumbnail-2.com",
+        original: "http://image-original-2.com",
+      },
+    ],
     links: {
       repository: "https://repo-02.com",
       deploy: "https://deploy-02.com",

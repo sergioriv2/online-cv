@@ -110,6 +110,9 @@ describe("'/projects' endpoint", () => {
         start: "2022-01-01",
       },
       softwares: ["C++, SFML, HTML/CSS, Bootstrap"],
+      images: {
+        original: "http://project-image-01.com",
+      },
       links: {
         deploy: "https://github.com",
         repository: "https://github.com",

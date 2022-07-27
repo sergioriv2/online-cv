@@ -25,13 +25,13 @@ const update = async (req, res) => {
 
     if (!me) return res.status(404).json({ ok: false, msg: "Not found." });
 
-    me.names.firstName = fName;
-    me.names.lastName = lName;
+    fName ? (me.names.firstName = fName) : null;
+    lName ? (me.names.lastName = lName) : null;
 
-    me.image = image;
-    me.password = password;
-    me.resume = resume;
-    me.academic_background = academic_background;
+    image ? (me.images = image) : null;
+    password ? (me.password = password) : null;
+    resume ? (me.resume = resume) : null;
+    academic_background ? (me.academic_background = academic_background) : null;
 
     await me.save();
 

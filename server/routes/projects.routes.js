@@ -55,7 +55,15 @@ router.post(
       .optional(),
     check("links.repository", "'repository' field is required.")
       .notEmpty()
-      .isString("'repository' field must be a string."),
+      .isString()
+      .withMessage("'repository' field must be a string."),
+    check("images.thumbnail", "'thumbnail'  field must be a string.")
+      .isString()
+      .optional(),
+    check("images.original", "'original image' field is required.")
+      .notEmpty()
+      .isString()
+      .withMessage("'original image' field must be a string."),
     check("links.deploy", "'deploy' field must be a string.").isString(),
     check("softwares", "'softwares' field is required.").notEmpty().isArray(),
     validateFields,
